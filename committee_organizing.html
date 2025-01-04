@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IEEE IRI 2025</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/iri.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script>
+	
+	var Stuart_Txt = "Stuart H. Rubin, received a Ph.D. in Information Science from Lehigh University and a certificate for Embodied Intelligence from MIT. He was an ONT Post-Doctoral Fellow and a tenured professor of computer science at CMU. He has over 41 Navy patents, over 335 publications – including five book chapters plus five books, and received five publication awards. He is a Fellow of the IEEE, SIRI, the NAI, and the AAAS.";
+	
+function showImageAndText(imgName, txtName) {
+document.getElementById('largeImg').src = imgName;
+showLargeImagePanel();
+unselectAll();
+}
+	
+function showImage(imgName) {
+document.getElementById('largeImg').src = imgName;
+showLargeImagePanel();
+unselectAll();
+}
+
+function showLargeImagePanel() {
+document.getElementById('largeImgPanel').style.visibility = 'visible';
+}
+
+function unselectAll() {
+if(document.selection) document.selection.empty();
+if(window.getSelection) window.getSelection().removeAllRanges();
+}
+
+function hideMe(obj) {
+obj.style.visibility = 'hidden';
+}
+	</script> 
+
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9">
+                <div class="row">
+                    <h4><span class="glyphicon glyphicon-chevron-right"></span> Organizing Committee <em>(to be completed)</em></h4>
+                    <hr>
+                    <div>
+                        <!--<dl class="dl-horizontal">
+                            <dt><span>Honorary General Chair </span></dt>
+                            <dd>Lotfi Zadeh, <em>University of California, Berkeley, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Program Co-Chairs </span></dt>
+                            <dd>Ravi Sandhu, <em>University of Texas, San Antonio, USA</em></dd>
+                            <dd>Calton Pu, <em>Georgia Institute of Technology, USA</em></dd>
+                            <dd>James Joshi, <em>University of Pittsburgh, USA</em></dd>
+                            <dd>Konstantinos Pelechrinis, <em>University of Pittsburgh, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Sponsorship Co-Chairs</span></dt>
+                            <dd>Ling Liu, <em>Gerogia Institute of Technology, USA</em></dd>
+                            <dd>James Joshi, <em>University of Pittsburgh, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Panels Co-Chair</span></dt>
+                            <dd>Mei-Ling Shyu, <em>University of Miami, USA</em></dd>
+                            <dd>Elisa Bertino, <em>Purdue University, USA</em></dd>
+                            <dd>Bhavani Thuraisingham, <em>UT Dallas, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Workshop Co-chairs</span></dt>
+                            <dd>Massimillano Albanese, <em>George Mason University, USA</em></dd>
+                            <dd>Thouraya Bouabana-Tebibel, <em>École nationale Supérieure d'Informatique, Algeria</em></dd>
+                            <dd>Min-Yu Day, <em>Tamkang University, Taiwan, R.O.C </em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Industry/Application Track Chairs</span></dt>
+                            <dd>Heiko, <em>IBM Almaden Research, CA, USA</em></dd>
+                            <dd>Tanvir Ahmed, <em>Oracle, CA, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Finance Chair</span></dt>
+                            <dd>Chengcui Zhang, <em>University of Alabama at Birmingham, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Publications Chair</span></dt>
+                            <dd>Amir Masoumzadeh, <em>State University of New York, Albany, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Publicity Chair</span></dt>
+                            <dd>Balaji Palanisamy, <em>University of Pittsburgh, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Best Award Committee</span></dt>
+                            <dd>Balaji Palanisamy, <em>University of Pittsburgh, USA</em></dd>
+                            <dd>Du Zhang, <em>Macau University of Science and Technology, China</em></dd>
+                            <dd>Reda Alhajj, <em>University of Calgary, Canada</em></dd>
+                            <dd>Taghi Khosgoftar, <em>Florida Atlantic University, USA</em></dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt><span>Webmaster</span></dt>
+                            <dd>Runhua Xu. <em>University of Pittsburgh, USA</em></dd>
+                        </dl>-->
+						<!--<p class="text-justify">
+								<strong>Honorary General Chair:</strong> Lotfi Zadeh, <em>University of California, Berkeley, USA</em>
+							<p class="text-justify">
+								<strong>General Co-Chairs:</strong>
+								<ul>
+								<li>Stuart Rubin, <em>SPAWAR Systems Center Pacific (SSC-Pacific), USA</em></li>
+								<li>Shu-Ching Chen, <em>Florida International University, USA</em></li>
+								</ul>
+							<p class="text-justify">
+								<strong>Program Co-Chairs:</strong>
+								<ul>
+								<li>Chengcui Zhang, <em>University of Alabama at Birmingham, USA</em></li>
+								<li>Balaji Palanisamy, <em>University of Pittsburgh, USA</em></li>
+								<li>Latifur Khan, <em>University of Texas at Dallas, USA</em></li>
+								<li>Sahra Sedigh Sarvestani, <em>Missouri University of Science & Technology, USA</em></li>
+								</ul>-->
+                    </div>
+					<div>
+						<dl class="dl-horizontal">
+                            <dt><span>Honorary General Chair </span></dt>
+                            <!--<dd>Stuart Rubin, <em>SPAWAR Systems Center Pacific (SSC-Pacific), USA</em></dd>-->
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/stuart2.JPG" alt="Stuart Rubin" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI25/" target="_blank">
+                                                      <strong>Stuart Rubin</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <!--<span><em>SPAWAR Systems Center Pacific (SSC-Pacific), USA</em></span>-->
+                            </div>
+							</dd>
+                        </dl>
+						<dl class="dl-horizontal">
+                            <dt><span>General Chair </span></dt>
+                            
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Shu-Ching1.jpg" alt="Shu-Ching Chen" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://sse.umkc.edu/profiles/chen-shu-ching.html" target="_blank">
+                                                      <strong>Shu-Ching Chen</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Missouri-Kansas City, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						<dl class="dl-horizontal">
+                            <dt><span>Program Co-Chairs </span></dt>
+							<!--<dd>Nan Niu, <em>University of Cincinnati, USA</em></dd>-->
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Nan.jpg" alt="Nan Niu" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn" target="_blank">
+                                                      <strong>Nan Niu</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Cincinnati, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/LydiaBouzarBenlabiod.jpg" alt="Lydia Bouzar-Benlabiod" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://cs.acadiau.ca/Lydia-BOUZAR-BENLABIOD.html" target="_blank">
+                                                      <strong>Lydia Bouzar-Benlabiod</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Acadia University, Canada</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/chen-wei-bang.jpg" alt="Wei-Bang Chen" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://www.linkedin.com/in/wbc0522/" target="_blank">
+                                                      <strong>Wei-Bang Chen</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Virginia State University, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/joshi.jpg" alt="James Joshi" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://www.sis.pitt.edu/jjoshi/" target="_blank">
+                                                      <strong>James Joshi</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Pittsburgh, USA</em></span>
+                            </div>
+							</dd>
+							
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/shyu.jpg" alt="Mei-Ling Shyu" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://lweb.umkc.edu/shyu/" target="_blank">
+                                                      <strong>Mei-Ling Shyu</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Missouri-Kansas City, USA</em></span>
+                            </div>
+							</dd>
+							
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Yudong_Tao.jpg" alt="Yudong Tao" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://homepages.uc.edu/~niunn/IRI25" target="_blank">
+                                                      <strong>Yudong Tao</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Meta, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						
+						
+						<dl class="dl-horizontal">
+                            <dt><span>Poster Co-Chairs</span></dt>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Xiaoyu_Jin.jpg" alt="Xiaoyu Jin" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://www.linkedin.com/in/xiaoyu-jin-22525466" target="_blank">
+                                                      <strong>Xiaoyu Jin</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Google, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Sandeep_Reddivari.jpg" alt="Sandeep Reddivari" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://sandeepreddy.domains.unf.edu/" target="_blank">
+                                                      <strong>Sandeep Reddivari</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of North Florida, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						
+						
+						<dl class="dl-horizontal">
+                            <dt><span>Workshop Co-Chairs</span></dt>
+							
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Ankit_Agrawal.jpg" alt="Ankit Agrawal" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://scholar.google.com/citations?user=jepQqkoAAAAJ&hl=en" target="_blank">
+                                                      <strong>Ankit Agrawal</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Saint Louis University, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/ZedongPeng.jpg" alt="Zedong Peng" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://www.umt.edu/computer-science/people/?ID=8214" target="_blank">
+                                                      <strong>Zedong Peng</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Montana, USA</em></span>
+                            </div>
+							</dd>
+							
+							
+                        </dl>
+						
+                        <dl class="dl-horizontal">
+                            <dt><span>Finance and Registration Co-Chairs</span></dt>
+                            
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/YongjinLu.jpg" alt="Yongjin Lu" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://oakland.edu/math/the-people/" target="_blank">
+                                                      <strong>Yongjin Lu</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Oakland University, USA</em></span>
+                            </div>
+							</dd>
+							<!--<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/XiaoliangWang.jpg" alt="Xiaoliang Wang" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://ww1.oswego.edu/computer-science/profile/xiaoliang-wang" target="_blank">
+                                                      <strong>Xiaoliang Wang</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>State University of New York at Oswego, USA</em></span>
+                            </div>
+							</dd>-->
+                        </dl>
+						
+						
+						<dl class="dl-horizontal">
+                            <dt><span>Proceedings Co-Chairs</span></dt>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Min-Yuh.jpg" alt="Min-Yuh Day" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://mail.tku.edu.tw/myday/" target="_blank">
+                                                      <strong>Min-Yuh Day</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>National Taipei University, Taiwan</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Truong_Tran.jpg" alt="Truong X. Tran" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://sites.psu.edu/truongtran/" target="_blank">
+                                                      <strong>Truong X. Tran</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Pennsylvania State University, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						
+						<dl class="dl-horizontal">
+                            <dt><span>Test-of-Time Award Co-Chairs</span></dt>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Jianquan_Liu.jpg" alt="Jianquan Liu" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://www.nec.com/en/global/rd/people/jianquan_liu.html" target="_blank">
+                                                      <strong>Jianquan Liu</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>NEC, Japan</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Danda.jpg" alt="Danda B. Rawat" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://www.rawatonline.com/" target="_blank">
+                                                      <strong>Danda B. Rawat</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Howard University, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						
+						<dl class="dl-horizontal">
+                            <dt><span>Publicity Co-Chairs</span></dt>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Ouali.jpg" alt="Mohammed Ouali" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://www.adrian.edu/academics/undergraduate-programs/applied-computing/faculty" target="_blank">
+                                                      <strong>Mohammed Ouali</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Adrian College, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Xiaohong_Chen.jpg" alt="Xiaohong Chen" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI25/" target="_blank">
+                                                      <strong>Xiaohong Chen</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>East China Normal University, China</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/XinChen.jpg" alt="Xin Chen" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://gsunews.govst.edu/jasmine-chen/" target="_blank">
+                                                      <strong>Xin Chen</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Governors State University, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/WentaoWang-Photo.jpg" alt="Wentao Wang" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://www.linkedin.com/in/wentao-wang-7a433aa4" target="_blank">
+                                                      <strong>Wentao Wang</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Oracle, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/chengcui.jpg" alt="Chengcui Zhang" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://sites.uab.edu/czhang02/" target="_blank">
+                                                      <strong>Chengcui Zhang</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Alabama at Birmingham, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						
+						
+						<!--<dl class="dl-horizontal">
+                            <dt><span>Publicity Co-Chairs</span></dt>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Sakib.jpg" alt="Al-Sakib Khan Pathan" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://sites.google.com/site/spathansite/" target="_blank">
+                                                      <strong>Al-Sakib Khan Pathan</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>United International University, Bangladesh</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/YongqingSun.jpg" alt="Yongqing Sun" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="https://homepages.uc.edu/~niunn/IRI23" target="_blank">
+                                                      <strong>Yongqing Sun</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Nihon University, Japan</em></span>
+                            </div>
+							</dd>
+							
+                        </dl>-->
+						
+						<!--
+						<dl class="dl-horizontal">
+                            <dt><span>Student Volunteers</span></dt>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Rayhan.jpg" alt="Md Rayhan Amin" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI22/committee_organizing.html">
+                                                      <strong>Md Rayhan Amin</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Mississippi State University, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Raj.jpeg" alt="Rajatsubhra Chakraborty" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI22/committee_organizing.html">
+                                                      <strong>Rajatsubhra Chakraborty</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Wayne State University, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="resources/images/Aurek_pic.jpg" alt="Aurek Chattopadhyay" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI22/committee_organizing.html">
+                                                      <strong>Aurek Chattopadhyay</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Cincinnati, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="css/images/siri.png" alt="Bradley E Cox" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI22/committee_organizing.html">
+                                                      <strong>Bradley E Cox</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>Virginia State University, USA</em></span>
+                            </div>
+							</dd>
+							<dd>&nbsp;</dd>
+							<dd>
+							<div class="media-left">
+                                <img class="media-object" src="css/images/siri.png" alt="Shahariar Rabby" width="100">
+                                            </div>
+                                            <div class="media-body">
+                                              
+                                                <h5 class="media-heading">
+                                                  <a href="http://homepages.uc.edu/~niunn/IRI22/committee_organizing.html">
+                                                      <strong>Shahariar Rabby</strong>
+                                                  </a>
+                                                  <span class="glyphicon glyphicon-new-window"></span>
+                                                  <br>
+                                                  <br>
+                                                </h5>
+                                                <span><em>University of Alabama at Birmingham, USA</em></span>
+                            </div>
+							</dd>
+                        </dl>
+						-->
+
+					<!--<h3>(to be completed)</h3>-->
+                    
+					</div>
+                </div>
+
+
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <div id="right-side"></div>
+        </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+        $("#right-side").load("side.html");
+    </script>
+</body>
+</html>
