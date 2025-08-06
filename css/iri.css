@@ -1,17 +1,45 @@
 /* head part*/
-.logo {margin: 50px 20px 0px 20px; padding: 10px;}
-.logo .society {margin-top: 5px;}
+.logo {
+    margin: 50px 20px 0px 20px;
+    padding: 10px;
+}
+
+.logo .society {
+    margin-top: 5px;
+}
+
 .logo .title {
     font-size: 30pt;
     font-weight: 900;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
-.logo .location {margin-left:150px;}
-.logo .date {margin-left:150px;}
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.logo .location {
+    margin-left: 150px;
+}
+
+.logo .date {
+    margin-left: 150px;
+}
 
 /*override*/
-.head-container-fluid { padding-right: 0px; padding-left: 0px;}
-.dl-horizontal dt {white-space: normal;}
-.canvas {height: 500px;}
+.head-container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.canvas {
+    height: 500px;
+}
+
+.img-responsive {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*override*/
 .navbar .navbar-nav {
@@ -21,12 +49,12 @@
 
 .navbar .navbar-collapse {
     text-align: center;
-    font-size:16px;
+    font-size: 16px;
     margin-bottom: -5px;
 }
 
 .dropdown-submenu {
-  position: relative;
+    position: relative;
 }
 
 .dropdown-submenu>.dropdown-menu {
@@ -57,12 +85,13 @@
 }
 
 #largeImgPanel {
-text-align: center;
-visibility: hidden;
-position: fixed;
-z-index: 100;
-top: 10%; left: 10%;
-width:25%;
-height:25%; 
-background-color: none;
+    text-align: center;
+    visibility: hidden;
+    position: fixed;
+    z-index: 100;
+    top: 10%;
+    left: 10%;
+    width: 25%;
+    height: 25%;
+    background-color: none;
 }
