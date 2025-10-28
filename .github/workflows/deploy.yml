@@ -1,0 +1,53 @@
+name: Deploy 2026 to Root
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '2026/**'
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy 2026 files to root and fix paths
+        run: |
+          # List of files to deploy
+          files=(
+            "index.html"
+            "call_papers.html"
+            "committee_organizing.html"
+            "committee_program.html"
+            "history.html"
+            "header.html"
+            "footer.html"
+            "side.html"
+          )
+
+          echo "Deploying 2026 files to root..."
+
+          for file in "${files[@]}"; do
+            if [ -f "2026/$file" ]; then
+              echo "Processing $file..."
+              # Copy file and update paths
+              sed 's|../css/|css/|g; s|../js/|js/|g; s|../resources/|resources/|g; s|../fonts/|fonts/|g' \
+                "2026/$file" > "$file"
+            fi
+          done
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add *.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-deploy: Update root files from 2026 [skip ci]" && git push)
