@@ -135,6 +135,7 @@
     width: 150px;
     height: 150px;
     object-fit: cover;
+    object-position: center 30%;
     border-radius: 50%;
     margin: 0 auto 15px;
     display: block;
@@ -165,6 +166,27 @@
     line-height: 1.4;
 }
 
+/* Custom positioning for specific images */
+.committee-card img.pos-top {
+    object-position: center 10%;
+}
+
+.committee-card img.pos-upper {
+    object-position: center 25%;
+}
+
+.committee-card img.pos-center {
+    object-position: center center;
+}
+
+.committee-card img.pos-lower {
+    object-position: center 40%;
+}
+
+.committee-card img.pos-right {
+    object-position: 90% 30%;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .committee-grid {
@@ -175,5 +197,6 @@
     .committee-card img {
         width: 120px;
         height: 120px;
+        object-position: center 30%;
     }
 }
