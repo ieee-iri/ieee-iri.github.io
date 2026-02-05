@@ -33,6 +33,7 @@ jobs:
             "footer.html"
             "side.html"
             "call_workshop.html"
+            "workshop_emrite.html"
           )
 
           echo "Deploying 2026 files to root..."
