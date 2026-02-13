@@ -34,6 +34,7 @@ jobs:
             "side.html"
             "call_workshop.html"
             "workshop_emrite.html"
+            "workshop_aihc.html"
           )
 
           echo "Deploying 2026 files to root..."
