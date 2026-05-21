@@ -26,6 +26,7 @@ jobs:
           files=(
             "index.html"
             "call_papers.html"
+            "registration.html"
             "committee_organizing.html"
             "committee_program.html"
             "history.html"
