@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - '2026/**'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -27,6 +28,7 @@ jobs:
             "index.html"
             "call_papers.html"
             "registration.html"
+            "camera_ready.html"
             "committee_organizing.html"
             "committee_program.html"
             "history.html"
