@@ -40,6 +40,7 @@ jobs:
             "call_workshop.html"
             "workshop_emrite.html"
             "workshop_aihc.html"
+            "speakers_keynotes.html"
           )
 
           echo "Deploying 2026 files to root..."
