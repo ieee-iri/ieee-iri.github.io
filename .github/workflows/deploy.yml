@@ -1,15 +1,23 @@
-name: Deploy 2026 to Root
+name: Deploy 2027 to Root
+
+# The current conference year's folder is the source of truth; its pages are
+# copied to the repo root (the main site) with ../ asset paths rewritten.
+# To switch years: update YEAR, the paths filter, and the name above.
 
 on:
   push:
     branches:
       - main
     paths:
-      - '2026/**'
+      - '2027/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+env:
+  YEAR: '2027'
 
 jobs:
   deploy:
@@ -21,37 +29,18 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Copy 2026 files to root and fix paths
+      - name: Copy ${{ env.YEAR }} files to root and fix paths
         run: |
-          # List of files to deploy
-          files=(
-            "index.html"
-            "call_papers.html"
-            "registration.html"
-            "camera_ready.html"
-            "program.html"
-            "conference_location.html"
-            "committee_organizing.html"
-            "committee_program.html"
-            "history.html"
-            "header.html"
-            "footer.html"
-            "side.html"
-            "call_workshop.html"
-            "workshop_emrite.html"
-            "workshop_aihc.html"
-            "speakers_keynotes.html"
-          )
+          echo "Deploying $YEAR files to root..."
 
-          echo "Deploying 2026 files to root..."
-
-          for file in "${files[@]}"; do
-            if [ -f "2026/$file" ]; then
-              echo "Processing $file..."
-              # Copy file and update paths
-              sed 's|../css/|css/|g; s|../js/|js/|g; s|../resources/|resources/|g; s|../fonts/|fonts/|g' \
-                "2026/$file" > "$file"
-            fi
+          # Deploy every page in the year folder, so new pages need no workflow edit
+          shopt -s nullglob
+          for src in "$YEAR"/*.html; do
+            file="$(basename "$src")"
+            echo "Processing $file..."
+            # Copy file and update paths
+            sed 's|../css/|css/|g; s|../js/|js/|g; s|../resources/|resources/|g; s|../fonts/|fonts/|g' \
+              "$src" > "$file"
           done
 
       - name: Commit and push changes
@@ -59,4 +48,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add *.html
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-deploy: Update root files from 2026 [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-deploy: Update root files from $YEAR [skip ci]" && git push)
