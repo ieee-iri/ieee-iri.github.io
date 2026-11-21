@@ -151,8 +151,8 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="dropdown-submenu">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                            data-target="#">
+                                        <a href="#" class="submenu-toggle" role="button" aria-haspopup="true"
+                                            aria-expanded="false">
                                             History <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a tabindex="-1" href="history.html">History of IRI</a></li>
@@ -163,8 +163,8 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown-submenu">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                            data-target="#">
+                                        <a href="#" class="submenu-toggle" role="button" aria-haspopup="true"
+                                            aria-expanded="false">
                                             Committees <span class="caret"></span></a>
                                         <ul class="dropdown-menu">
                                             <li><a tabindex="-1" href="committee_organizing.html">Organizing
@@ -182,6 +182,35 @@
             </nav>
         </div>
     </div>
+    <script>
+        // Nav submenus (About Us > History / Committees) open on hover on desktop.
+        // On touch screens and in the collapsed phone menu, a tap toggles them instead,
+        // without closing the parent "About Us" menu (Bootstrap's data-toggle would).
+        (function () {
+            function setOpen($item, open) {
+                $item.toggleClass('open', open).children('.submenu-toggle').attr('aria-expanded', open);
+            }
+            function hoverDrivesMenu() {
+                // wide menu + a real mouse: iri.css's :hover rule already shows the submenu,
+                // so keep desktop hover-only (pinning it open would overlap its sibling)
+                var canHover = window.matchMedia && window.matchMedia('(hover: hover)').matches;
+                return canHover && !$('.navbar-toggle').is(':visible');
+            }
+            $(document)
+                .off('.iriSubmenu')
+                .on('click.iriSubmenu', '.dropdown-submenu > .submenu-toggle', function (e) {
+                    e.preventDefault();
+                    e.stopPropagation(); // keep Bootstrap's document-level clearMenus from closing "About Us"
+                    if (hoverDrivesMenu()) return;
+                    var $item = $(this).parent();
+                    setOpen($item.siblings('.dropdown-submenu.open'), false);
+                    setOpen($item, !$item.hasClass('open'));
+                })
+                .on('hidden.bs.dropdown.iriSubmenu', function (e) {
+                    setOpen($(e.target).find('.dropdown-submenu.open'), false);
+                });
+        })();
+    </script>
 </body>
 
 </html>
