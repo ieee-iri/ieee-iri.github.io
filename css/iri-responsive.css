@@ -26,6 +26,11 @@
     .navbar .dropdown-submenu.open > .dropdown-menu {
         display: block;
     }
+    /* committee cards: the hover lift/shadow would stay stuck after a tap */
+    .committee-section .committee-card:hover {
+        transform: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
 }
 
 /* ---------- Small laptops: 1200px - 1499px ---------- */
@@ -80,6 +85,32 @@
     .carousel .carousel-caption h2 {
         font-size: 19px;
     }
+
+    /* pages that put content straight into a nested .row (committees, history): the two
+       -15px row margins cancelled the padding (flush on phones, ~9px gutter on tablets) */
+    .col-md-9 > .row:not(:has(> [class*="col-"])) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* sidebar SIRI logo: its col-xs-5 / col-sm-7 float was never cleared, so the caption
+       wrapped beside (tablet) or over (phone) the logo; stack them instead */
+    #right-side .col-md-8 {
+        float: none;
+        width: auto;
+    }
+}
+
+/* Tablets portrait: About Us is the right-most nav item, so open its flyouts to the
+   left instead of past the screen edge */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar .navbar-nav > li:last-child .dropdown-submenu > .dropdown-menu {
+        left: auto;
+        right: 100%;
+        margin-left: 0;
+        margin-right: -1px;
+        border-radius: 6px 0 6px 6px;
+    }
 }
 
 /* ---------- Phones: < 768px ---------- */
@@ -106,22 +137,35 @@
         font-size: 13px;
         margin-bottom: 2px;
     }
-    /* pages that put content straight into a nested .row (committees, history) were
-       flush against the screen edge: the two -15px row margins cancelled all padding */
-    .col-md-9 > .row:not(:has(> [class*="col-"])) {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
     /* home-page tribute: full width, smaller type */
     .container blockquote {
         font-size: 15px;
         padding: 10px 14px;
     }
 
-    /* sponsor logos: don't blow up to full phone width */
+    /* justified text in a ~320px column leaves big word gaps */
+    .container .text-justify {
+        text-align: left;
+    }
+
+    /* home-page news: stacked items (title above text) need a gap between entries;
+       "dd + dt" keeps multi-dd lists (program co-chairs) compact */
+    .dl-horizontal dd + dt {
+        margin-top: 10px;
+    }
+
+    /* call_papers nests a column directly in a column (no .row), doubling the padding */
+    .col-md-9 .col-md-12 > .col-xs-12 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* sponsor logos: fit the column, but don't blow up to full phone width */
     #right-side img.img-responsive {
-        max-width: 260px;
+        max-width: min(100%, 260px);
+    }
+    #right-side img[src*="siri"] {
+        max-width: 180px;
     }
 
     /* collapsed navbar: Bootstrap already lays open submenus out inline;
