@@ -1,0 +1,139 @@
+/*
+ * IEEE IRI responsive overrides (mobile / tablet / small laptop).
+ *
+ * Desktop at >= 1500px renders exactly as without this file: every layout rule
+ * below lives inside a max-width media query. The one rule outside a media query
+ * only applies after a user clicks/taps a nav submenu.
+ *
+ * Banner math: images are 2048x400, so banner height ~= width / 5.12. The full
+ * desktop caption needs ~295px, which only fits from ~1500px up; below that the
+ * caption is stepped down and, where needed, the banner gets a min-height with
+ * object-fit: cover (crops the panorama's sides instead of clipping the text).
+ */
+
+/* Nav submenus (About Us > History / Committees): opened by tap/click via header.html */
+.dropdown-submenu.open > .dropdown-menu {
+    display: block;
+}
+
+/* Touch screens can't hover: iri.css's ".dropdown-submenu:hover" rule would stick after a
+   tap (and makes iOS swallow the first tap), so let the tap toggle (.open) alone decide.
+   Selectors out-rank iri.css, which header.html loads again later in the cascade. */
+@media (hover: none) {
+    .navbar .dropdown-submenu:hover > .dropdown-menu {
+        display: none;
+    }
+    .navbar .dropdown-submenu.open > .dropdown-menu {
+        display: block;
+    }
+}
+
+/* ---------- Small laptops: 1200px - 1499px ---------- */
+@media (max-width: 1499px) {
+    /* the banner row's -15px margins made the page 15px wider than the screen */
+    .head-container-fluid > .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .carousel .carousel-caption {
+        padding-top: 10px;
+        padding-bottom: 34px;
+    }
+    .carousel .carousel-caption h2 {
+        font-size: 24px;
+        margin: 6px 0 4px;
+    }
+    .carousel .carousel-caption h3 {
+        font-size: 18px;
+        margin: 2px 0;
+    }
+    .carousel .carousel-caption p {
+        font-size: 13px;
+        margin-bottom: 4px;
+    }
+}
+
+/* ---------- Tablets landscape / small desktops: 992px - 1199px ---------- */
+@media (max-width: 1199px) {
+    .carousel .carousel-inner > .item > img {
+        width: 100%;
+        min-height: 230px;
+        object-fit: cover;
+    }
+    .carousel .carousel-caption {
+        left: 15%;
+        right: 15%;
+    }
+    .carousel .carousel-caption h2 {
+        font-size: 21px;
+    }
+    .carousel .carousel-caption h3 {
+        font-size: 15px;
+    }
+}
+
+/* ---------- Tablets portrait: 768px - 991px ---------- */
+@media (max-width: 991px) {
+    .carousel .carousel-inner > .item > img {
+        min-height: 240px;
+    }
+    .carousel .carousel-caption h2 {
+        font-size: 19px;
+    }
+}
+
+/* ---------- Phones: < 768px ---------- */
+@media (max-width: 767px) {
+    .carousel .carousel-inner > .item > img {
+        min-height: 250px;
+        object-position: 45% 50%;
+    }
+    .carousel .carousel-caption {
+        left: 10%;
+        right: 10%;
+        padding-top: 6px;
+        padding-bottom: 22px;
+    }
+    .carousel .carousel-caption h2 {
+        font-size: 18px;
+        margin: 4px 0 2px;
+    }
+    .carousel .carousel-caption h3 {
+        font-size: 13px;
+        margin: 0;
+    }
+    .carousel .carousel-caption p {
+        font-size: 13px;
+        margin-bottom: 2px;
+    }
+    /* pages that put content straight into a nested .row (committees, history) were
+       flush against the screen edge: the two -15px row margins cancelled all padding */
+    .col-md-9 > .row:not(:has(> [class*="col-"])) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* home-page tribute: full width, smaller type */
+    .container blockquote {
+        font-size: 15px;
+        padding: 10px 14px;
+    }
+
+    /* sponsor logos: don't blow up to full phone width */
+    #right-side img.img-responsive {
+        max-width: 260px;
+    }
+
+    /* collapsed navbar: Bootstrap already lays open submenus out inline;
+       indent them so History / Committees read as sub-levels */
+    .navbar .navbar-collapse .dropdown-submenu > .dropdown-menu {
+        margin-top: 0;
+        padding-left: 14px;
+    }
+    /* Bootstrap's ".nav .open > a" light-gray highlight is unreadable on the dark menu */
+    .navbar-inverse .navbar-collapse .dropdown-submenu.open > a,
+    .navbar-inverse .navbar-collapse .dropdown-submenu.open > a:hover,
+    .navbar-inverse .navbar-collapse .dropdown-submenu.open > a:focus {
+        background-color: transparent;
+    }
+}
